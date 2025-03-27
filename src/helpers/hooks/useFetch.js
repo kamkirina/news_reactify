@@ -18,7 +18,7 @@ export const useFetch = (fetchFunction, params) => {
 
         //console.log(error);
       } finally {
-        //setIsLoading(false);
+        setIsLoading(false);
       }
     })();
   }, [fetchFunction, paramsToString]);
