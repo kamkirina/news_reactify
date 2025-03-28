@@ -1,7 +1,12 @@
 import styles from "./styles.module.css";
 import { formatTimeAgo } from "../../helpers/formatTimeAgo";
+import { INews } from "../../interfaces";
 
-export function NewsItem({ item }) {
+interface IProps {
+  item: INews;
+}
+
+export function NewsItem({ item }: IProps) {
   return (
     <li className={styles.item}>
       <div
