@@ -1,6 +1,13 @@
+import { DirectionType, SkeletonType } from "../../interfaces";
 import styles from "./styles.module.css";
 
-export function Skeleton({ count = 1, type = "banner", direction = "column" }) {
+interface IProps {
+   type?: SkeletonType,
+    count?: number,
+    direction?: DirectionType
+}
+
+export function Skeleton({ count = 1, type = "banner", direction = "column" }: IProps) {
   return (
     <>
       {count > 1 ? (
