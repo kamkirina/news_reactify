@@ -1,8 +1,13 @@
 import styles from "./styles.module.css";
 import { formatTimeAgo } from "../../helpers/formatTimeAgo";
 import { Image } from "../Image/Image";
+import { INews } from "../../interfaces";
 
-function NewsBanner({ item }) {
+interface IProps {
+  item: INews;
+}
+
+function NewsBanner({ item }: IProps) {
   return (
     <div className={styles.banner}>
       <Image image={item?.image} />
